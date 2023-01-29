@@ -169,6 +169,6 @@ app.delete('/api/songs/:id', (req,res)=>{
         return 200;
     }
 });
-//1)Postman comminucates to my javascript express local host to access my API
-//2) I learned how to access an API through Postman requests
-//3) This project can be further extended by connecting songs to genres
+//1)To access my API, Postman connects to my javascript express local host.
+//2) I became familiar with using an API by using Postman requests.
+//3) Songs and genres can be linked to advance this project.
