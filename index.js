@@ -1,7 +1,6 @@
 //Vikram Varikooty Even 7-8 Jan 29, 2023
-
-/*Tools: code editor, browser, command line utility, 
-application and server utility, API platform
+/*Tools required:  browser, code editor,  API platform, command line utility, server utility, and
+application
 */
 const express = require('express')
 const app = express();
