@@ -1,6 +1,7 @@
 //Vikram Varikooty Even 7-8 Jan 29, 2023
-/*Tools required:  browser, code editor,  API platform, command line utility, server utility, and
-application
+
+/*Tools: code editor, browser, command line utility, 
+application and server utility, API platform
 */
 const express = require('express')
 const app = express();
@@ -45,7 +46,7 @@ app.get('/api/genres/:id', (req,res)=>{
 app.get('/api/songs/:id', (req,res)=>{
     const song = songs.find(c=> c.id === parseInt(req.params.id));
     if(!song){
-        res.status(404).send("The song with the given ID was not found");
+        res.status(404).send("There is no song with that ID");
         return;
     }
         res.send(song);
@@ -95,10 +96,10 @@ app.post('/api/songs', (req,res)=> {
 app.put('/api/genres/:id', (req,res)=>{
     const genre = genres.find(c=> c.id === parseInt(req.params.id));
     if(!genre){
-        res.status(404).send("The course with the given ID was not found");
+        res.status(404).send("The genre with the given ID was not found");
         return;
     }
-    else if(Object.values(req.body)[0].length >= 3){
+    else if(Object.values(req.body)[1].length >= 3){
         const newGenre ={
             //we assign an ID and a name property
             id: req.params.id,
@@ -118,10 +119,10 @@ app.put('/api/genres/:id', (req,res)=>{
 app.put('/api/songs/:id', (req,res)=>{
     const song = songs.find(c=> c.id === parseInt(req.params.id));
     if(!song){
-        res.status(404).send("The course with the given ID was not found");
+        res.status(404).send("The genre with the given ID was not found");
         return;
     }
-    else if(Object.values(req.body)[0].length >= 3){
+    else if(Object.values(req.body)[1].length >= 3){
         const newSong ={
             //we assign an ID and a name property
             id: req.params.id,
@@ -168,6 +169,6 @@ app.delete('/api/songs/:id', (req,res)=>{
         return 200;
     }
 });
-//1)To access my API, Postman connects to my javascript express local host.
-//2) I became familiar with using an API by using Postman requests.
-//3) Songs and genres can be linked to advance this project.
+//1)Postman comminucates to my javascript express local host to access my API
+//2) I learned how to access an API through Postman requests
+//3) This project can be further extended by connecting songs to genres
